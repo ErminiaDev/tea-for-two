@@ -180,6 +180,10 @@ span {
   background-color: #41392d; 
 }
 
+.form-control {
+  width: 225px;
+}
+
 #main-footer {
   background-color: #41392d; 
   opacity:0.5;
@@ -208,6 +212,12 @@ span {
 
   .lead {
     font-size: 1rem;
+  }
+
+  .form-control {
+      width: 130px;
+      font-size: 12px;
+    }
   }
 }
 
