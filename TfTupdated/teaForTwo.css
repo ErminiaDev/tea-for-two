@@ -1,0 +1,247 @@
+/* font-family: 'Nunito', sans-serif; */
+/* Lively yet soothing color scheme:
+#026670 (dark teal)
+#9FEDD7 (light blue)
+#FEF9C7 (sand)
+#FCE181 (peach)
+#EDEAE5 (gray) */
+
+/* the pink background */
+
+body {
+  position: relative;
+  background:#EDEAE5;
+  color:#41392d;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* changing a bootstrap setting for rows to make horizontal scrollbar disappear */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* up arrow for back to top */
+#back-to-top i {
+  border: solid #EDEAE5;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+/* up arrow for back to top end */
+
+/* Scroll to top button */
+#back-to-top {
+  background-color: #3E2F28;
+  color: #EDEAE5;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  z-index: 999;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+a#back-to-top {
+  text-align: center;
+  line-height: 0.5;
+  padding-left: 1px;
+  padding-top: 20px;
+}
+
+#back-to-top.show {
+     opacity: 0.8;
+}
+/* Scroll to top button end */
+
+#mainNavbar {
+  font-weight:100;
+  font-size:1.5rem;
+}
+
+#mainNavbar .nav-link {
+  color:#41392d;
+}
+
+#mainNavbar .navbar-brand {
+  color:#026670;
+  font-size:1.5rem;
+  font-weight:400;
+}
+
+
+#mainNavbar .text {
+  opacity: 1.0;
+}
+
+#mainNavbar li a:hover {
+  font-weight: 400;
+  color: #41392d;
+}
+
+/* changing color on scroll */
+#mainNavbar.scrolled {
+  background: rgba(237, 234, 229, 0.7);
+  transition: background 500ms;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+}
+
+#header h1 {
+  font-size:6rem;
+}
+
+#header span {
+  font-size:3rem;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  font-size:3rem;
+}
+
+span {
+  font-family: 'Nunito', sans-serif;
+  font-weight:400;
+  font-size:1.5rem;
+}
+
+#tea-section img,
+#garden-section img{
+   height: 100%;
+   width: 100%;
+   max-width: 100%;
+}
+
+#tea-section .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #EDEAE5;
+  opacity: 0.7;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .7s ease;
+}
+
+#tea-section .text {
+  color: black;
+  opacity: 1.0;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#tea-section .container-img:hover .overlay {
+  height: 100%;
+}
+
+#contact button,
+#location button {
+  border: 1px solid #41392d;
+  color: #41392d;
+  border-radius: 50px;
+}
+}
+#location button {
+  border-radius: 50px;
+}
+
+#contact button:hover,
+#location button:hover {
+  border: 1px solid #41392d;
+  color: #EDEAE5;
+  background-color: #41392d; 
+}
+
+.form-control {
+  width: 225px;
+}
+
+#main-footer {
+  background-color: #41392d; 
+  opacity:0.5;
+}
+
+#developer{
+  font-family: 'Sacramento', cursive;
+  font-size: 1.5em;
+}
+
+@media (max-width:1100px){
+  #header h1 {
+    font-size:3rem;
+  }
+  #header span {
+    font-size:1.5rem;
+  }
+
+  #presentation p {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .form-control {
+    width: 130px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width:764px){
+  #presentation h2 {
+    font-family: 'Sacramento', cursive;
+    font-size:5rem;
+  }
+
+  h2{
+    font-size:3rem;
+  }
+  
+  #presentation span {
+    font-family: 'Nunito', sans-serif;
+    font-weight:400;
+    font-size:2.5rem;
+  }
+
+  #tea-section .text {
+    font-size: 15px;
+  }
+  
+  #mainNavbar {
+    background: rgba(237, 234, 229, 0.5);
+  }
+
+  .navbar-toggler {
+    background:rgba(0, 0, 0, 0.3);
+  }
+}
