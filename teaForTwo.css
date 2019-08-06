@@ -21,6 +21,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* changing bootstrap setting for rows to make horizontal scrollbar disappear */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* up arrow for back to top */
 #back-to-top i {
   border: solid #EDEAE5;
