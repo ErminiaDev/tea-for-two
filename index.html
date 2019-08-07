@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -30,7 +33,7 @@
 <!-- -------------NAVBAR------------------ -->
 <nav class="navbar navbar-dark navbar-expand-md py-0 fixed-top" id="mainNavbar">
   <a href="#top" class="navbar-brand">HOME</a>
-  <button id=navbar-toggler class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="toggle navigation">
+  <button id=navbar-toggler class="navbar-toggler my-1" data-toggle="collapse" data-target="#navLinks" aria-label="toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navLinks">
@@ -279,9 +282,14 @@
 <footer id="main-footer" class="py-5 text-white">
     <div class="container">
       <row class="text-center">
-        <div class="col-md-6 mx-auto">
-          <p class="lead">
-            <span id="developer">Erminia Dev&nbsp;</span>&copy; <span id="year"></span>
+        <div class="mx-auto">
+          <p class="lead d-inline">
+            Tea for Two &nbsp;&nbsp;|&nbsp;&nbsp;1584 Oakwood Lane, Twin Peaks, WA 56498&nbsp;&nbsp;|&nbsp;&nbsp;
+          </p>
+          <a class="link" href="javascript:;"><i class="icon fab fa-facebook px-1"></i></a>
+          <a class="link" href="javascript:;"><i class="icon fab fa-twitter px-1"></i></a>
+          <p class="py-3">
+            <span id="developer"><a href="javascript:;">Erminia Dev</a>&nbsp;</span>&copy; <span id="year"></span>
           </p>
         </div>
       </row>
@@ -295,12 +303,18 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <script>
       //scrollspy
       $('body').scrollspy({ target: '#navLinks' });
+
+      //collapse navbar on click
+      $(".navbar-nav li a").click(function(event) {
+          if (!$(this).parent().hasClass('dropdown'))
+              $(".navbar-collapse").collapse('hide');
+      });
 
       // Get the current year for the copyright
       $('#year').text(new Date().getFullYear());

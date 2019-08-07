@@ -1,10 +1,4 @@
-/* font-family: 'Nunito', sans-serif; */
-/* Lively yet soothing color scheme:
-#026670 (dark teal)
-#9FEDD7 (light blue)
-#FEF9C7 (sand)
-#FCE181 (peach)
-#EDEAE5 (gray) */
+
 
 /* the pink background */
 body {
@@ -189,9 +183,30 @@ span {
   opacity:0.5;
 }
 
+#main-footer .link{
+  color: white;
+}
+
+#main-footer .link:hover{
+  font-size: 1.2em;
+}
+
 #developer{
   font-family: 'Sacramento', cursive;
   font-size: 1.5em;
+}
+
+#year{
+  font-size: 1.3em;
+}
+
+#developer a{
+  color: white;
+  text-decoration: none;
+}
+
+#developer a:hover{
+  font-weight: bold;
 }
 
 @media (max-width:1100px){
@@ -219,9 +234,13 @@ span {
       font-size: 12px;
     }
   }
-}
 
-@media (max-width:764px){
+
+@media (max-width:768px){
+  #mainNavbar {
+    background: rgba(237, 234, 229, 0.7);
+  }
+
   #presentation h2 {
     font-family: 'Sacramento', cursive;
     font-size:5rem;
@@ -245,8 +264,9 @@ span {
     background: rgba(237, 234, 229, 0.5);
   }
 
-  .navbar-toggler {
-    background:rgba(0, 0, 0, 0.3);
+  .navbar-dark .navbar-toggler {
+    border-color:rgba(2, 102, 112, 0.5);
+    background-color: rgba(237, 234, 229, 0.2);
   }
 
 }
