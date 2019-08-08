@@ -93,7 +93,7 @@ a#back-to-top {
 /* changing color on scroll */
 #mainNavbar.scrolled {
   background: rgba(237, 234, 229, 0.7);
-  transition: background 500ms;
+  transition: 500ms;
 }
 
 h1 {
